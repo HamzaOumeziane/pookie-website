@@ -1,0 +1,13 @@
+<div class="valentine-container bg-animated">
+    <h1>Happy Valentine's Day My Little Pookie❤️</h1>
+    <p>Celebrate love and sweetness with someone special (LIKE ME)!</p>
+    <p>Spread joy, kindness, and happiness. I love you SO MUCH.</p>
+
+    <button class="btn" (click)="showLoveMessage()">I love you too 💌</button>
+  
+    <div class="hearts">
+      <div *ngFor="let heart of heartsArray" class="heart" [ngStyle]="heart.style"></div>
+    </div>
+
+  </div>
+  
