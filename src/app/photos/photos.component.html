@@ -1,1 +1,24 @@
-<p>photos works!</p>
+<div class="photos-page">
+    <h1 class="photos-title">Galerie de Photos</h1>
+    <h1 class="photos-title">Galerie de Photos</h1>
+    <h4 class="photos-title">Here are some pictures that we share together as POOKIE/COOKIE COUPLE. ❤️</h4>
+
+
+    
+    <!-- Zone pour la grille des photos -->
+    <div class="photos-grid">
+      <div *ngFor="let photo of photos()" class="photo-card" [routerLink]="['/profile', photo.id]">
+        <div class="icon-noeud">          
+          <i class="fas fa-ribbon"></i> 
+        </div>
+        <div class="photo-image-container">
+          <img [src]="photo.picture" [alt]="photo.title">
+        </div>
+        <div class="photo-info">
+          <h3>{{ photo.title }}</h3>
+          <p class="photo-location">{{ photo.location }}</p>
+          <p class="photo-date">{{ photo.created}}</p>
+        </div>
+      </div>
+    </div>
+  </div>

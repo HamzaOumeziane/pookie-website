@@ -1,0 +1,134 @@
+/* Conteneur général de la page Photos */
+.photos-page {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* Titre de la galerie */
+  .photos-title {
+    margin-bottom: 20px;
+    color: #ff4e50;
+  }
+  
+  /* Grille pour disposer les photos */
+  .photos-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  /* Carte photo avec bordure animée */
+  .photo-card {
+    width: 300px;
+    background: #fff;
+    
+    border: 2px solid transparent;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    position: relative;
+  }
+
+  /* Effet de halo rose sur la carte au survol (optionnel) */
+.photo-card::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #ff4e50, #fc466b, #ff6b81, #ff3385);
+  background-size: 400% 400%;
+  z-index: -1;
+  filter: blur(5px);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+  
+  /* Bordure animée rose : on utilise un pseudo-élément */
+  .photo-card::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #ff4e50, #fc466b, #ff6b81, #ff3385);
+    background-size: 400% 400%;
+    z-index: -1;
+    filter: blur(5px);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .photo-card:hover::before {
+    opacity: 1;
+  }
+  
+  .photo-card:hover {
+    transform: scale(1.02);
+  }
+  
+  /* Conteneur de l'image */
+  .photo-image-container {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    border: 5px solid pink;
+    box-sizing: border-box; 
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  .photo-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* Informations sur la photo */
+  .photo-info {
+    padding: 10px;
+    border-left: 3px solid #ff3385;
+    border-right: 3px solid #ff3385;
+    border-bottom: 3px solid #ff3385;;
+
+  }
+  
+  .photo-info h3 {
+    margin: 0;
+    color: #333;
+  }
+  
+  .photo-location {
+    color: #ff4e50;
+    font-weight: bold;
+  }
+  
+  .photo-date {
+    color: #777;
+    font-size: 0.9rem;
+  }
+
+  .icon-noeud {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    /* Ajustez la taille, la couleur, etc. */
+    font-size: 24px;
+    color: #ff4e50;
+    /* Optionnel : petit fond arrondi pour faire ressortir l’icône */
+    background: #fff;
+    border-radius: 50%;
+    padding: 5px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+  }
+
+  .icon-noeud i {
+    /* Éventuellement une couleur différente de l’arrière-plan */
+    color: palevioletred;
+  }
+  
+  
